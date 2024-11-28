@@ -1,7 +1,4 @@
-//go:build helloworld
-// +build helloworld
-
-package main
+package helloworld
 
 import "fmt"
 
@@ -13,10 +10,6 @@ func HelloWorld() {
 	example_struct_person()
 	example_make_map()
 	example_difference_using_map_or_not()
-}
-
-func main() {
-	HelloWorld()
 }
 
 func example_students() {

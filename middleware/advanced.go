@@ -1,6 +1,3 @@
-//go:build advanced
-// +build advanced
-
 package middleware
 
 import (
@@ -67,8 +64,4 @@ func Hello(w http.ResponseWriter, r *http.Request) {
 func AdvancedMiddleware() {
 	http.HandleFunc("/", Chain(Hello, Method("GET"), Logging()))
 	http.ListenAndServe(":8084", nil)
-}
-
-func main() {
-	AdvancedMiddleware()
 }

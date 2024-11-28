@@ -1,6 +1,3 @@
-//go:build basic
-// +build basic
-
 package middleware
 
 import (
@@ -35,8 +32,4 @@ func BasicMiddleware() {
 	http.HandleFunc("/", logging(root))
 
 	http.ListenAndServe(":8083", nil)
-}
-
-func main() {
-	BasicMiddleware()
 }
