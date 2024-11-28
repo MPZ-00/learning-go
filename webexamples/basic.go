@@ -1,5 +1,7 @@
-// basic-middleware.go
-package main
+//go:build basic
+// +build basic
+
+package middleware
 
 import (
 	"fmt"
