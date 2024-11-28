@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	mode := flag.String("mode", "basic", "Choose middleware mode: basic or advanced")
+	mode := flag.String("mode", "basic", "Choose mode: basic, advanced or helloworld")
 	flag.Parse()
 
 	switch *mode {
