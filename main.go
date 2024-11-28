@@ -17,7 +17,7 @@ func main() {
 		middleware.BasicMiddleware()
 	case "advanced":
 		fmt.Println("Running advanced middleware")
-		middleware.AdcancedMiddleware()
+		middleware.AdvancedMiddleware()
 	case "helloworld":
 		fmt.Println("Running helloworld")
 		helloworld.HelloWorld()
