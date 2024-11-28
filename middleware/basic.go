@@ -28,11 +28,15 @@ func root(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintln(w, "Hello World!")
 }
 
-func main() {
+func BasicMiddleware() {
 	http.HandleFunc("/foo", logging(foo))
 	http.HandleFunc("/bar", logging(bar))
 
 	http.HandleFunc("/", logging(root))
 
 	http.ListenAndServe(":8083", nil)
+}
+
+func main() {
+	BasicMiddleware()
 }

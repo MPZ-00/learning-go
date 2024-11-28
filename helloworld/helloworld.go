@@ -1,8 +1,11 @@
+//go:build helloworld
+// +build helloworld
+
 package main
 
 import "fmt"
 
-func main() {
+func HelloWorld() {
 	fmt.Println("Hello, World!")
 
 	example_students()
@@ -10,6 +13,10 @@ func main() {
 	example_struct_person()
 	example_make_map()
 	example_difference_using_map_or_not()
+}
+
+func main() {
+	HelloWorld()
 }
 
 func example_students() {
