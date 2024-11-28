@@ -63,6 +63,6 @@ func Hello(w http.ResponseWriter, r *http.Request) {
 
 func AdvancedMiddleware() {
 	http.HandleFunc("/", Chain(Hello, Method("GET"), Logging()))
-	http.ListenAndServe(":8083", nil)
 	fmt.Println("Server is running at port 8083")
+	http.ListenAndServe(":8083", nil)
 }
